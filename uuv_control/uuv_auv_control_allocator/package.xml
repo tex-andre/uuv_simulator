@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>uuv_auv_control_allocator</name>
   <version>0.6.13</version>
   <description>Optimal allocation of forces and torques to thruster and fins of AUVs</description>
