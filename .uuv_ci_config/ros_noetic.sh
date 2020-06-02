@@ -14,5 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Clone repositories that do not have a ros-lunar package
-sh .uuv_ci_config/uuv_dependencies.sh
+# DEP PACKAGES
+apt -qq install --no-install-recommends --allow-unauthenticated -y \
+  build-essential python3-pip dvi2ps dvipng binutils \
+  mesa-utils x-window-system
