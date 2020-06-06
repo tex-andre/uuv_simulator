@@ -1,14 +1,21 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(uuv_gazebo_plugins)
 
-# Specify C++11 standard
-add_definitions(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
     gazebo_dev)
 find_package(Boost REQUIRED COMPONENTS system)
 find_package(Eigen3 REQUIRED)
 find_package(Protobuf REQUIRED)
+
+# sdfformat9 uses C++17 features. 
+if(${GAZEBO_MAJOR_VERSION} GREATER_EQUAL 11)
+    # Specify C++17 standard
+    add_definitions(-std=c++17)
+else()
+    # Specify C++11 standard
+    add_definitions(-std=c++11)
+endif()
 
 file(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/msgs)
 
