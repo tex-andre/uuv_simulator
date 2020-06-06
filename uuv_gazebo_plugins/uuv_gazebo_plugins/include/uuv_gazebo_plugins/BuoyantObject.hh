@@ -29,6 +29,15 @@
 
 #define RESTORING_FORCE   "restoring_force"
 
+// In ignition-math6 Box has been renamed to AxisAlignedBox and a 
+// new Box class with different properties has been created. 
+#if GAZEBO_MAJOR_VERSION >= 11
+  using AxisAlignedBox = ignition::math::AxisAlignedBox;
+#else
+  using AxisAlignedBox = ignition::math::Box;
+#endif
+
+
 namespace gazebo
 {
 /// \brief Class describing the dynamics of a buoyant object, useful for simple
@@ -74,7 +83,7 @@ class BuoyantObject
   public: double GetGravity();
 
   /// \brief Sets bounding box
-  public: void SetBoundingBox(const ignition::math::Box &_bBox);
+  public: void SetBoundingBox(const AxisAlignedBox &_bBox);
 
   /// \brief Adds a field in the hydroWrench map
   public: void SetStoreVector(std::string _tag);
@@ -120,7 +129,7 @@ class BuoyantObject
 
   /// \brief TEMP for calculation of the buoyancy
   /// force close to the surface
-  protected: ignition::math::Box boundingBox;
+  protected: AxisAlignedBox boundingBox;
 
   /// \brief Storage for hydrodynamic and hydrostatic forces and torques
   /// for debugging purposes

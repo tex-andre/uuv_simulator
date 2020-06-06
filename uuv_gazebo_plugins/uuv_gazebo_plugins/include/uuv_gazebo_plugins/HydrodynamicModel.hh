@@ -36,6 +36,14 @@
 #include <uuv_gazebo_plugins/Def.hh>
 #include <uuv_gazebo_plugins/BuoyantObject.hh>
 
+// In ignition-math6 Box has been renamed to AxisAlignedBox and a 
+// new Box class with different properties has been created. 
+#if GAZEBO_MAJOR_VERSION >= 11
+  using AxisAlignedBox = ignition::math::AxisAlignedBox;
+#else
+  using AxisAlignedBox = ignition::math::Box;
+#endif
+
 
 namespace gazebo
 {
