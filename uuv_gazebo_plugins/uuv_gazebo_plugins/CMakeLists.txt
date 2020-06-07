@@ -9,7 +9,7 @@ find_package(Eigen3 REQUIRED)
 find_package(Protobuf REQUIRED)
 
 # sdfformat9 uses C++17 features. 
-if(${GAZEBO_MAJOR_VERSION} GREATER_EQUAL 11)
+if(NOT (GAZEBO_MAJOR_VERSION LESS 11))
     # Specify C++17 standard
     add_definitions(-std=c++17)
 else()
