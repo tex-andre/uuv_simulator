@@ -50,6 +50,11 @@
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/core/core.hpp>
 
+// CV_AA has been renamed into cv::LINE_AA in recent OpenCV releases.
+#ifndef CV_AA
+  using CV_AA = cv::LINE_AA;
+#endif
+
 namespace gazebo
 {
 // Register this plugin with the simulator
