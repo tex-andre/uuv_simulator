@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+apt update
+apt -qq install --no-install-recommends -y wget
+
 sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 
 wget http://packages.osrfoundation.org/gazebo.key -O /tmp/gazebo.key
