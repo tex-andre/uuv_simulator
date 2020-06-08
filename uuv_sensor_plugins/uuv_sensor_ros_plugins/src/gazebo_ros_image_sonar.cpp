@@ -52,7 +52,7 @@
 
 // CV_AA has been renamed into cv::LINE_AA in recent OpenCV releases.
 #ifndef CV_AA
-  using CV_AA = cv::LINE_AA;
+  #define CV_AA cv::LINE_AA
 #endif
 
 namespace gazebo
