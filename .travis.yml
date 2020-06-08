@@ -15,18 +15,18 @@ env:
     - CATKIN_LINT_ARGS="--ignore link_directory"
 matrix:
   include:
-    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
-    - env: USE_DEB=true ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
-    - env: USE_DEB=true ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh && sh .uuv_ci_config/install_gazebo9.sh' ROSDEP_SKIP_KEYS="gazebo gazebo_dev gazebo_msgs gazebo_plugins gazebo_ros gazebo_ros_control gazebo_ros_pkgs" ROS_PYTHON_VERSION=2
-    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
-    - env: USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
-    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=melodic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
+    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
+    - env: USE_DEB=true ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
+    - env: USE_DEB=true ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/install_gazebo9.sh' ROSDEP_SKIP_KEYS="gazebo gazebo_dev gazebo_msgs gazebo_plugins gazebo_ros gazebo_ros_control gazebo_ros_pkgs" ROS_PYTHON_VERSION=2
+    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
+    - env: USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
+    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=melodic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
     - env: USE_DEB=true ROS_DISTRO=melodic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh 'ROS_PYTHON_VERSION=2
     - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=noetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=3
     - env: USE_DEB=true ROS_DISTRO=noetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=3
   allow_failures:
-    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
-    - env: USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu AFTER_INSTALL_TARGET_DEPENDENCIES='sh .uuv_ci_config/ros_$ROS_DISTRO.sh' ROS_PYTHON_VERSION=2
+    - env: PRERELEASE=true USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
+    - env: USE_DEB=true ROS_DISTRO=lunar ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu ROS_PYTHON_VERSION=2
     
 install:
   - git clone --depth 1 https://github.com/ros-industrial/industrial_ci.git .ci_config -b master
