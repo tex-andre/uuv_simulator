@@ -104,6 +104,7 @@ if(CATKIN_ENABLE_TESTING)
       test/test_sphere_vehicle.test
       test/test_thrusters.test
       )
-     add_rostest(${T})
+     # TODO: These tests require a dependency to uuv_descriptions, which would result into a circular dependency. 
+     # add_rostest(${T})
   endforeach()
 endif()
