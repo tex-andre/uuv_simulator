@@ -18,6 +18,7 @@ import rospy
 import unittest
 import subprocess
 import os
+import sys
 
 PKG = 'uuv_descriptions'
 NAME = 'test_urdf_files'
@@ -28,7 +29,13 @@ roslib.load_manifest(PKG)
 
 def call_xacro(xml_file):
     assert os.path.isfile(xml_file), 'Invalid XML xacro file'
-    return subprocess.check_output(['xacro', '--inorder', xml_file])
+    output = subprocess.check_output(['xacro', '--inorder', xml_file])
+
+    # In Python3 subprocess.check_output returns a byte-string instead of a normal string.
+    if sys.version_info.major >= 3:
+          return output.decode()
+
+    return output
 
 
 class TestRexROVURDFFiles(unittest.TestCase):
