@@ -14,7 +14,7 @@
 # limitations under the License.
 import rospy
 import numpy
-from thruster import Thruster
+from uuv_thrusters.models.thruster import Thruster
 
 
 class ThrusterProportional(Thruster):
