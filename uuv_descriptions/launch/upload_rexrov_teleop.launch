@@ -1,4 +1,7 @@
 <launch>
+
+<!-- Flag to start recoding a rosbag  -->
+  <arg name="record" default="false"/>
   <arg name="debug" default="0"/>
 
 <!--
