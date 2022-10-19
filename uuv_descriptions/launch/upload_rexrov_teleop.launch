@@ -3,7 +3,11 @@
 <!-- Flag to start recoding a rosbag  -->
   <arg name="record" default="false"/>
   <arg name="debug" default="0"/>
+  <arg name="use_ned_frame" default="false"/>
 
+  <arg name="mode" default="default"/>
+  <arg name="namespace" default="rexrov"/>
+  
 <!--
       ID of the joystick (to find out the joystick's index, open jstest-gtk)
       Default joystick mapping set for the XBox 360 controller.
@@ -21,21 +25,14 @@
   <arg name="pitch" default="0.0"/>
   <arg name="yaw" default="0.0"/>
 
-  <arg name="mode" default="default"/>
-  <arg name="namespace" default="rexrov"/>
-  <arg name="use_ned_frame" default="false"/>
-
-  <include file="$(find uuv_descriptions)/launch/upload_rexrov_$(arg mode).launch">
-    <arg name="debug" value="$(arg debug)"/>
-    <arg name="x" value="$(arg x)"/>
-    <arg name="y" value="$(arg y)"/>
-    <arg name="z" value="$(arg z)"/>
-    <arg name="roll" value="$(arg roll)"/>
-    <arg name="pitch" value="$(arg pitch)"/>
-    <arg name="yaw" value="$(arg yaw)"/>
-    <arg name="use_ned_frame" value="$(arg use_ned_frame)"/>
-    <arg name="namespace" value="$(arg namespace)"/>
-  </include>
+  <!-- Add the RexROV vehicle to the world  -->
+  <include file="$(find uuv_descriptions)/launch/upload_rexrov.launch">
+        <arg name="x" default="20"/>
+        <arg name="y" default="0"/>
+        <arg name="z" default="-20"/>
+        <arg name="yaw" default="0"/>
+        <arg name="use_ned_frame" value="$(arg use_ned_frame)"/>
+    </include>
 
 <!-- Start the PID controller with its default parameters for the RexROV vehicle  -->
   <include file="$(find uuv_trajectory_control)/launch/rov_pid_controller.launch">
