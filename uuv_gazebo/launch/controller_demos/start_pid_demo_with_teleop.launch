@@ -53,7 +53,7 @@
         <arg name="gain_z" default="0.5"/>
     </include>
 
-    <!-- Start RViz  -->
+    <!-- Start RViz  
     <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find uuv_gazebo)/rviz/controller_demo.rviz"/>
-
+-->
 </launch>
