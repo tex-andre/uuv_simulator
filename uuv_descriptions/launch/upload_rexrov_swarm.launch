@@ -1,28 +1,30 @@
 <launch>
   <arg name="debug" default="0"/>
+  <arg name="mode" default="default"/>
+  <arg name="use_ned_frame" default="false"/>
 
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
   <arg name="z" default="-2"/>
+  <arg name="namespace" default="rexrov"/>
   <arg name="roll" default="0.0"/>
   <arg name="pitch" default="0.0"/>
   <arg name="yaw" default="0.0"/>
-
-  <arg name="mode" default="default"/>
-  <arg name="namespace" default="rexrov"/>
-  <arg name="use_ned_frame" default="false"/>
-
+  
+  <!-- position robot 2 -->
   <arg name="x_2" default="10"/>
   <arg name="y_2" default="10"/>
   <arg name="z_2" default="-2"/>
   <arg name="namespace_2" default="rexrov2"/>
 
+  <!-- position robot 3 -->
   <arg name="x_3" default="-10"/>
   <arg name="y_3" default="-10"/>
   <arg name="z_3" default="-2"/>
   <arg name="namespace_3" default="rexrov3"/>
 
-  <include file="$(find uuv_descriptions)/launch/upload_rexrov_$(arg mode).launch">
+  <!-- add robot 1-->
+  <include file="$(find uuv_descriptions)/launch/upload_$(arg namespace)_$(arg mode).launch">
     <arg name="debug" value="$(arg debug)"/>
     <arg name="x" value="$(arg x)"/>
     <arg name="y" value="$(arg y)"/>
@@ -35,7 +37,7 @@
   </include>
 
   <!-- add robot 2-->
-  <include file="$(find uuv_descriptions)/launch/upload_rexrov_$(arg mode).launch">
+  <include file="$(find uuv_descriptions)/launch/upload_$(arg namespace_2)_$(arg mode).launch">
     <arg name="debug" value="$(arg debug)"/>
     <arg name="x" value="$(arg x_2)"/>
     <arg name="y" value="$(arg y_2)"/>
