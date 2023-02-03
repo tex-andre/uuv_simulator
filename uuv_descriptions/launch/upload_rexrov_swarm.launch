@@ -3,6 +3,7 @@
   <arg name="mode" default="default"/>
   <arg name="use_ned_frame" default="false"/>
 
+  <!-- position robot 1-->
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
   <arg name="z" default="-2"/>
