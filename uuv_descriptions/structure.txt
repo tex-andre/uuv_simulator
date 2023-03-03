@@ -1,0 +1,42 @@
+.
+___ CHANGELOG.rst
+___ CMakeLists.txt
+___ launch
+|______ message_to_tf.launch
+|______ upload_rexrov2_default.launch
+|______ upload_rexrov3_default.launch
+|______ upload_rexrov_default.launch
+|______ upload_rexrov_default_noisy_pose.launch
+|______ upload_rexrov.launch
+|______ upload_rexrov_oberon4.launch
+|______ upload_rexrov_oberon7.launch
+|______ upload_rexrov_oberon_arms.launch
+|______ upload_rexrov_swarm.launch
+|______ upload_rexrov_teleop.launch
+___ meshes
+|______ collision.blend
+|______ prop.dae
+|______ RexROV_no_props.dae
+|______ RexROV_no_props.stl
+___ package.xml
+___ robots
+|______ rexrov2_default.xacro
+|______ rexrov_default_noisy_pose.xacro
+|______ rexrov_default.xacro
+|______ rexrov_oberon4.xacro
+|______ rexrov_oberon7.xacro
+|______ rexrov_oberon_arms.xacro
+|______ rexrov_sonar.xacro
+___ scripts
+|______ spawn_model
+___ test
+|______ test_urdf_files.py
+|______ test_urdf_files.test
+___ urdf
+    ___ common.urdf.xacro
+    ___ rexrov_actuators.xacro
+    ___ rexrov_base.xacro
+    ___ rexrov.gazebo.xacro
+    ___ rexrov_sensors.xacro
+
+6 directories, 34 files

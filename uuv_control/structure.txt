@@ -1,0 +1,9 @@
+.
+___ uuv_auv_control_allocator  --> Optimal allocation of forces and torques to thruster and fins of AUVs
+___ uuv_control_cascaded_pids  --> A cascade of PID controllers for acceleration, velocity, and position control.
+___ uuv_control_msgs  --> Descriptions of data values for published ROS nodes.
+___ uuv_control_utils  --> Waypoint-based path and trajectory generation package.
+___ uuv_thruster_manager  --> Manages a client ROS node to control the robot thrusters
+___ uuv_trajectory_control  --> Controllers for trajectory generation
+
+6 directories
