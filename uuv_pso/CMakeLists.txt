@@ -3,6 +3,8 @@ project(uuv_pso)
 
 find_package(catkin REQUIRED)
 
+catkin_python_setup()
+
 
 ###################################
 ## catkin specific configuration ##
@@ -20,6 +22,9 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
+
+
+
 #############
 ## Install ##
 #############
@@ -30,13 +35,7 @@ catkin_install_python(PROGRAMS scripts/pso.py
       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-
-
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
-
-
+install(DIRECTORY launch
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+        PATTERN "*~" EXCLUDE)
