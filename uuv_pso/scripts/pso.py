@@ -130,61 +130,35 @@ class PSO():
         old_swarm_best = np.zeros(d)
         particle_best = self.particle_pos[self.uuv_id]
         
-        for j in range(1):
-            # Checks for new particle best
-            if self.cpc_values[self.uuv_id] > f_particle_best:
-                particle_best = self.particle_pos[self.uuv_id]
-                f_particle_best = self.cpc_values[self.uuv_id]
-            # Iterates over each particle
-            for i in range(p):
-                # Checks for new swarm best
-                if self.cpc_values[i] > f_swarm_best:
-                    old_swarm_best = swarm_best
-                    swarm_best = self.particle_pos[i]
-                    f_swarm_best = self.cpc_values[i]
+        # Checks for new particle best
+        if self.cpc_values[self.uuv_id] > f_particle_best:
+            particle_best = self.particle_pos[self.uuv_id]
+            f_particle_best = self.cpc_values[self.uuv_id]
+        # Iterates over each particle
+        for i in range(p):
+            # Checks for new swarm best
+            if self.cpc_values[i] > f_swarm_best:
+                old_swarm_best = swarm_best
+                swarm_best = self.particle_pos[i]
+                f_swarm_best = self.cpc_values[i]
 
-            rp,rg=rnd.uniform(0,1,2) #creates two random numbers between 0-
-            self.particle_velocity[:]+=(c1*rp*(particle_best[:]-self.particle_pos[self.uuv_id,:]))
-            self.particle_velocity[:]+=(c2*rg*(swarm_best[:]-self.particle_pos[self.uuv_id,:]))
-            self.particle_velocity[:]=self.particle_velocity[:]*K
+        rp,rg=rnd.uniform(0,1,2) #creates two random numbers between 0-
+        self.particle_velocity[:]+=(c1*rp*(particle_best[:]-self.particle_pos[self.uuv_id,:]))
+        self.particle_velocity[:]+=(c2*rg*(swarm_best[:]-self.particle_pos[self.uuv_id,:]))
+        self.particle_velocity[:]=self.particle_velocity[:]*K
 
-            print('Iteration: ', j)
-            print('x:\t %f\ny:\t %f\nz:\t %f\n' %(self.particle_velocity[0], self.particle_velocity[1], self.particle_velocity[2]))
+    
+        print('x:\t %f\ny:\t %f\nz:\t %f\n' %(self.particle_velocity[0], self.particle_velocity[1], self.particle_velocity[2]))
         
         cmd = self.parse_velocity()
-
+        # Publish to output
         self.output_pub.publish(cmd)
+        # Waits for 1 sec    
+        rospy.sleep(1.)
+    
         self._init_subscribers()
         
-        # for i in range(p):
-        #     if particle_fitness < self.cpc_values[i]:
 
-
-        # particle_pos=np.zeros(p) #creating empty position array
-        # particle_pos=particle_pos.tolist() #converting array to list
-        # particle_velocity=particle_pos[:] #empty velocity array
-        # particle_pos_val=particle_pos[:] #empty value array
-
-        # # TODO: Function to generate conflict?
-
-        # for i in range(p): #iterates over each particle
-        #     rp,rg=rnd.uniform(0,1,2) #creates two random numbers between 0-
-        #     particle_velocity[i,:]+=(c1*rp*(particle_best[i,:]-particle_pos[i,:]))
-        #     particle_velocity[i,:]+=(c2*rg*(local_best[i,:]-particle_pos[i,:]))
-        #     particle_velocity[i,:]=particle_velocity[i,:]*K
-
-
-
-        
-
-        # local_best=local_best_get(particle_pos,particle_pos_val,p)
-
-        # swarm_best=particle_pos[np.argmin(particle_pos_val)]#getting the lowest particle value
-        # particle_best=copy.deepcopy(particle_pos)#setting all particles current positions to best
-        # return d,np.array(particle_pos), np.array(particle_best), \
-        #             np.array(swarm_best), np.array(particle_velocity), np.array(local_best), \
-        #                 np.array(particle_pos_val)
-        
 
 
 if __name__ == "__main__":
@@ -199,3 +173,23 @@ if __name__ == "__main__":
     except rospy.ROSInterruptException:
         print('Caught exception')
     rospy.loginfo('Shutting down PSO node.')
+
+
+
+            # for i in range(p):
+        #     if particle_fitness < self.cpc_values[i]:
+
+
+        # particle_pos=np.zeros(p) #creating empty position array
+        # particle_pos=particle_pos.tolist() #converting array to list
+        # particle_velocity=particle_pos[:] #empty velocity array
+        # particle_pos_val=particle_pos[:] #empty value array
+
+
+        # for i in range(p): #iterates over each particle
+        #     rp,rg=rnd.uniform(0,1,2) #creates two random numbers between 0-
+        #     particle_velocity[i,:]+=(c1*rp*(particle_best[i,:]-particle_pos[i,:]))
+        #     particle_velocity[i,:]+=(c2*rg*(local_best[i,:]-particle_pos[i,:]))
+        #     particle_velocity[i,:]=particle_velocity[i,:]*K
+
+        # # TODO: Function to generate conflict?

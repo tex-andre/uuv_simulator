@@ -14,7 +14,7 @@
       <rosparam subst_value="true">
         uuv_name: $(arg uuv_name)
         uuv_number: $(arg uuv_number)
-        uuv_id: 1
+        uuv_id: 0
       </rosparam>
     </node>
   </group>
@@ -26,7 +26,7 @@
       <rosparam subst_value="true">
         uuv_name: $(arg uuv_name)
         uuv_number: $(arg uuv_number)
-        uuv_id: 2
+        uuv_id: 1
       </rosparam>
     </node>
   </group>
@@ -38,7 +38,7 @@
       <rosparam subst_value="true">
         uuv_name: $(arg uuv_name)
         uuv_number: $(arg uuv_number)
-        uuv_id: 3
+        uuv_id: 2
       </rosparam>
     </node>
   </group>
