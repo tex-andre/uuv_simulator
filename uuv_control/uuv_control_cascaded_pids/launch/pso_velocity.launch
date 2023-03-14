@@ -1,5 +1,5 @@
 <launch>
-  <arg name="model_name" />
+  <arg name="model_name" default="rexrov"/>
   <arg name="uuv_name" default="$(arg model_name)"/>
   <arg name="joy_id" default="0"/>
 
