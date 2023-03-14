@@ -5,7 +5,7 @@ import numpy as np
 import numpy.random as rnd
 import copy
 from geometry_msgs.msg import Twist, Accel, Vector3
-from uuv_sensor_ros_plugins_msgs.msg._ChemicalParticleConcentration import ChemicalParticleConcentration as cpc
+from uuv_sensor_ros_plugins_msgs.msg import ChemicalParticleConcentration as cpc
 
 class PSO():
     def __init__(self):
@@ -65,7 +65,6 @@ class PSO():
         self.particle_pos[0][1] = msg.position.y
         self.particle_pos[0][2] = msg.position.z
         self.cpc_values[0] = msg.concentration
-        print('Topic ', self.sub_cpc1.name, ' has the value: %f' % self.cpc_values[0])
         
         if self.msg_count == self.uuv_number:
             self.ParticleSwarm(self.uuv_number)
@@ -79,7 +78,6 @@ class PSO():
         self.particle_pos[1][1] = msg.position.y
         self.particle_pos[1][2] = msg.position.z
         self.cpc_values[1] = msg.concentration
-        print('Topic ', self.sub_cpc2.name, ' has the value: %f' % self.cpc_values[1])
         
         if self.msg_count == self.uuv_number:
             self.ParticleSwarm(self.uuv_number)
@@ -93,7 +91,6 @@ class PSO():
         self.particle_pos[2][1] = msg.position.y
         self.particle_pos[2][2] = msg.position.z
         self.cpc_values[2] = msg.concentration
-        print('Topic ', self.sub_cpc3.name, ' has the value: %f' % self.cpc_values[2])
         
         if self.msg_count == self.uuv_number:
             self.ParticleSwarm(self.uuv_number)
@@ -116,12 +113,13 @@ class PSO():
     def ParticleSwarm(self, p):
         print('ParticleSwarm function')
         # PSO constant variables
-        c1 = 2.8
-        c2 = 1.3
-        tol = 0.00000000000001
+        c1 = 1.5    # 2.8
+        c2 = 1.0    # 1.3
+        # tol = 0.00000000000001
         d = 3
         c3=c1+c2
-        K=2/(abs(2-c3-np.sqrt((c3**2)-(4*c3)))) #creating velocity weighting factor
+        # K=2/(abs(2-c3-np.sqrt((c3**2)-(4*c3)))) #creating velocity weighting factor
+        K = 0.5
 
         # Initialize best swarm value
         f_swarm_best = 0.0
@@ -154,7 +152,7 @@ class PSO():
         # Publish to output
         self.output_pub.publish(cmd)
         # Waits for 1 sec    
-        rospy.sleep(1.)
+        rospy.sleep(0.1)
     
         self._init_subscribers()
         

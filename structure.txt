@@ -6,7 +6,7 @@ ___ uuv_descriptions  --> Package with robot descriptions and spawn script
 ___ uuv_gazebo  --> 
 ___ uuv_gazebo_plugins  --> 
 ___ uuv_gazebo_worlds  --> Contains a selection of models for underwater vehicles in scenarios of exploration and testing.
-___ uuv_sensor_plugins  --> 
+___ uuv_sensor_plugins  --> Package for rov sensor plugins
 ___ uuv_simulator  --> uuv_simulator contains Gazebo plugins and ROS packages for modeling and simulating unmanned underwater vehicles
 ___ uuv_teleop  --> ROS nodes to generate command topics for vehicles and manipulators using a joystick input
 ___ uuv_tutorials  --> 
