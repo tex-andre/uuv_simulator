@@ -24,7 +24,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -37,7 +37,7 @@ Visualization Manager:
       Marker Topic: /world_models
       Name: World models
       Namespaces:
-        "": true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/TF
@@ -45,10 +45,6 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        world:
-          Value: true
-        world_ned:
-          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -56,9 +52,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        world:
-          world_ned:
-            {}
+        {}
       Update Interval: 0
       Value: true
     - Alpha: 0.5
@@ -125,137 +119,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        rexrov/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/camera_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/cameraleft_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/cameraleft_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/cameraright_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/cameraright_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/cc_sensor_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov/dvl_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/dvl_sonar0_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/dvl_sonar1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/dvl_sonar2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/dvl_sonar3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov/imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov/magnetometer_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/pose_sensor_link_default:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov/pressure_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/rpt_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov/thruster_7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Robot1Model
       Robot Description: /rexrov/robot_description
       TF Prefix: ""
@@ -272,137 +135,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        rexrov2/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/camera_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/cameraleft_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/cameraleft_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/cameraright_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/cameraright_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/cc_sensor_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov2/dvl_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/dvl_sonar0_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/dvl_sonar1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/dvl_sonar2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/dvl_sonar3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov2/imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov2/magnetometer_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/pose_sensor_link_default:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov2/pressure_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/rpt_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov2/thruster_7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Robot2Model
       Robot Description: /rexrov2/robot_description
       TF Prefix: ""
@@ -419,139 +151,24 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        rexrov3/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/camera_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/cameraleft_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/cameraleft_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/cameraright_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/cameraright_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/cc_sensor_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov3/dvl_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/dvl_sonar0_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/dvl_sonar1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/dvl_sonar2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/dvl_sonar3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov3/imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov3/magnetometer_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/pose_sensor_link_default:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        rexrov3/pressure_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/rpt_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rexrov3/thruster_7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Robot3Model
       Robot Description: /rexrov3/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: Robot4Model
+      Robot Description: /rexrov4/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -645,7 +262,7 @@ Visualization Manager:
         Value: true
       Enabled: true
       Keep: 100
-      Name: Odometry2
+      Name: Odometry3
       Position Tolerance: 0.10000000149011612
       Queue Size: 10
       Shape:
@@ -659,6 +276,41 @@ Visualization Manager:
         Shaft Radius: 0.05000000074505806
         Value: Arrow
       Topic: /rexrov3/pose_gt
+      Unreliable: false
+      Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Keep: 100
+      Name: Odometry4
+      Position Tolerance: 0.10000000149011612
+      Queue Size: 10
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /rexrov4/pose_gt
       Unreliable: false
       Value: true
     - Class: rviz/Marker
@@ -681,6 +333,14 @@ Visualization Manager:
       Enabled: true
       Marker Topic: /rexrov3/current_velocity_marker
       Name: Current Velocity Marker 3
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /rexrov4/current_velocity_marker
+      Name: Current Velocity Marker 4
       Namespaces:
         {}
       Queue Size: 100
@@ -713,7 +373,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 201.39968872070312
+      Distance: 187.31056213378906
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -749,5 +409,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1440
-  X: 2112
-  Y: 133
+  X: 221
+  Y: 125
