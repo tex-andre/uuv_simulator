@@ -2,15 +2,15 @@
 <launch>
   <arg name="uuv_name" default="rexrov"/>
   <!-- Number of robots for the PSO script -->
-  <arg name="uuv_number" default="3"/>
-
+  <arg name="uuv_number" default="4"/>
+  
   <arg name="output_topic" default="cmd_vel"/>
   <arg name="message_type" default="twist"/>
 
   <!-- PSO script uuv1 -->
-  <group ns="$(arg uuv_name)1">
-    <node pkg="uuv_pso" type="pso.py" name="script_pso" output="screen">
-      <remap from="output" to="/$(arg uuv_name)/$(arg output_topic)"/>
+  <group ns="$(arg uuv_name)0">
+    <node pkg="uuv_pso" type="pso_waypoint.py" name="script_pso" output="screen">
+      <remap from="output" to="/$(arg uuv_name)0/$(arg output_topic)"/>
       <rosparam subst_value="true">
         uuv_name: $(arg uuv_name)
         uuv_number: $(arg uuv_number)
@@ -20,9 +20,9 @@
   </group>
 
   <!-- PSO script uuv2 -->
-  <group ns="$(arg uuv_name)2">
-    <node pkg="uuv_pso" type="pso.py" name="script_pso" output="screen">
-      <remap from="output" to="/$(arg uuv_name)2/$(arg output_topic)"/>
+  <group ns="$(arg uuv_name)1">
+    <node pkg="uuv_pso" type="pso_waypoint.py" name="script_pso" output="screen">
+      <remap from="output" to="/$(arg uuv_name)1/$(arg output_topic)"/>
       <rosparam subst_value="true">
         uuv_name: $(arg uuv_name)
         uuv_number: $(arg uuv_number)
@@ -32,13 +32,25 @@
   </group>
 
   <!-- PSO script uuv3 -->
-  <group ns="$(arg uuv_name)3">
-    <node pkg="uuv_pso" type="pso.py" name="script_pso" output="screen">
-      <remap from="output" to="/$(arg uuv_name)3/$(arg output_topic)"/>
+  <group ns="$(arg uuv_name)2">
+    <node pkg="uuv_pso" type="pso_waypoint.py" name="script_pso" output="screen">
+      <remap from="output" to="/$(arg uuv_name)2/$(arg output_topic)"/>
       <rosparam subst_value="true">
         uuv_name: $(arg uuv_name)
         uuv_number: $(arg uuv_number)
         uuv_id: 2
+      </rosparam>
+    </node>
+  </group>
+
+  <!-- PSO script uuv4 -->
+  <group ns="$(arg uuv_name)3">
+    <node pkg="uuv_pso" type="pso_waypoint.py" name="script_pso" output="screen">
+      <remap from="output" to="/$(arg uuv_name)3/$(arg output_topic)"/>
+      <rosparam subst_value="true">
+        uuv_name: $(arg uuv_name)
+        uuv_number: $(arg uuv_number)
+        uuv_id: 3
       </rosparam>
     </node>
   </group>

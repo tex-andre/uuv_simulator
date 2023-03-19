@@ -120,7 +120,7 @@ Visualization Manager:
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
       Name: Robot1Model
-      Robot Description: /rexrov/robot_description
+      Robot Description: /rexrov0/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -136,7 +136,7 @@ Visualization Manager:
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
       Name: Robot2Model
-      Robot Description: /rexrov2/robot_description
+      Robot Description: /rexrov1/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -152,7 +152,7 @@ Visualization Manager:
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
       Name: Robot3Model
-      Robot Description: /rexrov3/robot_description
+      Robot Description: /rexrov2/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -168,7 +168,7 @@ Visualization Manager:
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
       Name: Robot4Model
-      Robot Description: /rexrov4/robot_description
+      Robot Description: /rexrov3/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -205,7 +205,7 @@ Visualization Manager:
         Shaft Length: 1
         Shaft Radius: 0.05000000074505806
         Value: Arrow
-      Topic: /rexrov/pose_gt
+      Topic: /rexrov0/pose_gt
       Unreliable: false
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -240,7 +240,7 @@ Visualization Manager:
         Shaft Length: 1
         Shaft Radius: 0.05000000074505806
         Value: Arrow
-      Topic: /rexrov2/pose_gt
+      Topic: /rexrov1/pose_gt
       Unreliable: false
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -275,7 +275,7 @@ Visualization Manager:
         Shaft Length: 1
         Shaft Radius: 0.05000000074505806
         Value: Arrow
-      Topic: /rexrov3/pose_gt
+      Topic: /rexrov2/pose_gt
       Unreliable: false
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -310,12 +310,12 @@ Visualization Manager:
         Shaft Length: 1
         Shaft Radius: 0.05000000074505806
         Value: Arrow
-      Topic: /rexrov4/pose_gt
+      Topic: /rexrov3/pose_gt
       Unreliable: false
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /rexrov/current_velocity_marker
+      Marker Topic: /rexrov0/current_velocity_marker
       Name: Current Velocity Marker
       Namespaces:
         {}
@@ -323,7 +323,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /rexrov2/current_velocity_marker
+      Marker Topic: /rexrov1/current_velocity_marker
       Name: Current Velocity Marker 2
       Namespaces:
         {}
@@ -331,7 +331,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /rexrov3/current_velocity_marker
+      Marker Topic: /rexrov2/current_velocity_marker
       Name: Current Velocity Marker 3
       Namespaces:
         {}
@@ -339,11 +339,107 @@ Visualization Manager:
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /rexrov4/current_velocity_marker
+      Marker Topic: /rexrov3/current_velocity_marker
       Name: Current Velocity Marker 4
       Namespaces:
         {}
       Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 85; 255
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /rexrov0/waypoint_path_marker
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 85; 255
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /rexrov1/waypoint_path_marker
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 85; 255
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /rexrov2/waypoint_path_marker
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 85; 255
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /rexrov3/waypoint_path_marker
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:

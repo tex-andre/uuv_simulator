@@ -2,34 +2,38 @@
 
   <!-- add robot 1 -->
   <include file="$(find uuv_pso)/launch/upload_rexrov_pso.launch">
-    <arg name="namespace" default="rexrov"/>
-    <arg name="x" default="0"/>
-    <arg name="y" default="0"/>
-    <arg name="z" default="-2"/>
+    <arg name="namespace" value="rexrov0"/>
+    <arg name="velocity_control" value="false"/>
+    <arg name="x" value="25"/>
+    <arg name="y" value="0"/>
+    <arg name="z" value="-2"/>
   </include>
 
   <!-- add robot 2 -->
   <include file="$(find uuv_pso)/launch/upload_rexrov_pso.launch">
-    <arg name="namespace" default="rexrov2"/>
-    <arg name="x" default="25"/>
-    <arg name="y" default="25"/>
-    <arg name="z" default="-2"/>
+    <arg name="namespace" value="rexrov1"/>
+    <arg name="velocity_control" value="false"/>
+    <arg name="x" value="25"/>
+    <arg name="y" value="25"/>
+    <arg name="z" value="-2"/>
   </include>
 
   <!-- add robot 3 -->
   <include file="$(find uuv_pso)/launch/upload_rexrov_pso.launch">
-    <arg name="namespace" default="rexrov3"/>
-    <arg name="x" default="-25"/>
-    <arg name="y" default="-25"/>
-    <arg name="z" default="-2"/>
+    <arg name="namespace" value="rexrov2"/>
+    <arg name="velocity_control" value="false"/>
+    <arg name="x" value="-25"/>
+    <arg name="y" value="-25"/>
+    <arg name="z" value="-2"/>
   </include>
 
   <!-- add robot 4 -->
   <include file="$(find uuv_pso)/launch/upload_rexrov_pso.launch">
-    <arg name="namespace" default="rexrov4"/>
-    <arg name="x" default="-25"/>
-    <arg name="y" default="0"/>
-    <arg name="z" default="-2"/>
+    <arg name="namespace" value="rexrov3"/>
+    <arg name="velocity_control" value="false"/>
+    <arg name="x" value="-25"/>
+    <arg name="y" value="0"/>
+    <arg name="z" value="-2"/>
   </include>
 
 </launch>
