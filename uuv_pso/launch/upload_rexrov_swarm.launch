@@ -6,25 +6,25 @@
     <arg name="velocity_control" value="false"/>
     <arg name="x" value="25"/>
     <arg name="y" value="0"/>
-    <arg name="z" value="-2"/>
+    <arg name="z" value="-1"/>
   </include>
 
   <!-- add robot 2 -->
   <include file="$(find uuv_pso)/launch/upload_rexrov_pso.launch">
     <arg name="namespace" value="rexrov1"/>
     <arg name="velocity_control" value="false"/>
-    <arg name="x" value="25"/>
+    <arg name="x" value="-25"/>
     <arg name="y" value="25"/>
-    <arg name="z" value="-2"/>
+    <arg name="z" value="-1"/>
   </include>
 
   <!-- add robot 3 -->
   <include file="$(find uuv_pso)/launch/upload_rexrov_pso.launch">
     <arg name="namespace" value="rexrov2"/>
     <arg name="velocity_control" value="false"/>
-    <arg name="x" value="-25"/>
+    <arg name="x" value="25"/>
     <arg name="y" value="-25"/>
-    <arg name="z" value="-2"/>
+    <arg name="z" value="-1"/>
   </include>
 
   <!-- add robot 4 -->
@@ -32,8 +32,8 @@
     <arg name="namespace" value="rexrov3"/>
     <arg name="velocity_control" value="false"/>
     <arg name="x" value="-25"/>
-    <arg name="y" value="0"/>
-    <arg name="z" value="-2"/>
+    <arg name="y" value="-25"/>
+    <arg name="z" value="-1"/>
   </include>
 
 </launch>
